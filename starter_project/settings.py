@@ -47,8 +47,8 @@ DATABASES = {
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICS_DIRS = [BASE_DIR]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_DIRS = [BASE_DIR]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # TIP API configuration — injected at deploy time by the AI Coder system
 TIP_API_URL = os.environ.get('TIP_API_URL', '')
