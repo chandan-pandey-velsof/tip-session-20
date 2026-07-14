@@ -14,4 +14,4 @@ USER appuser
 
 EXPOSE 8000
 
-CMD sh -c "python manage.py migrate --noinput && gunicorn starter_project.wsgi --bind 0.0.0.0:8000 --workers 2"
+CMD sh -c "python manage.py migrate --noinput && python manage.py collectstatic --noinput && gunicorn starter_project.wsgi --bind 0.0.0.0:8000 --workers 2"
